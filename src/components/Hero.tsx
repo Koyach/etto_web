@@ -30,9 +30,9 @@ export default function Hero() {
                className="absolute top-0 right-[-2rem] w-[1px] bg-gradient-to-b from-white/0 via-white/40 to-white/0"
             />
             
-            <h1 className="text-vertical text-[#F2F0EB] font-serif text-4xl md:text-6xl lg:text-8xl leading-loose font-medium select-none mix-blend-screen drop-shadow-2xl flex items-start gap-x-6 md:gap-x-12">
+            <h1 className="text-vertical text-[#F2F0EB] font-serif text-4xl md:text-6xl lg:text-7xl leading-loose font-medium select-none mix-blend-screen drop-shadow-2xl flex flex-col items-start gap-12 md:gap-16 lg:gap-24 h-auto min-h-[50vh]">
                 {lines.map((line, lineIndex) => (
-                  <span key={lineIndex} className="block">
+                  <span key={lineIndex} className="block whitespace-nowrap">
                     {line.split("").map((char, charIndex) => (
                       <motion.span
                           key={`${lineIndex}-${charIndex}`}
