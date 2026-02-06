@@ -1,30 +1,18 @@
 import Hero from "@/components/Hero";
 import Intro from "@/components/Intro";
 import Concept from "@/components/Concept";
-import Steps from "@/components/Steps";
-import Design from "@/components/Design";
-import Variations from "@/components/Variations";
-import RingCase from "@/components/RingCase";
-import Select from "@/components/Select";
-import Reason from "@/components/Reason";
-import ShoppingGuide from "@/components/ShoppingGuide";
-import Privilege from "@/components/Privilege";
+import Origin from "@/components/Origin";
+import Editions from "@/components/Editions";
 import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen w-full overflow-x-hidden">
+    <main className="min-h-screen w-full overflow-x-hidden bg-black text-white">
       <Hero />
       <Intro />
       <Concept />
-      {/* <Steps /> */}
-      {/* <Design /> */}
-      <Variations />
-      {/* <RingCase /> */}
-      {/* <Select /> */}
-      {/* <Reason /> */}
-      {/* <ShoppingGuide /> */}
-      {/* <Privilege /> */}
+      <Origin />
+      <Editions />
       <Footer />
     </main>
   );
