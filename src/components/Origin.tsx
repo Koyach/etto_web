@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import ImagePlaceholder from "./ImagePlaceholder";
 
 export default function Origin() {
   return (
@@ -15,14 +16,14 @@ export default function Origin() {
           transition={{ duration: 1 }}
           className="relative aspect-[4/3] w-full bg-neutral-900 overflow-hidden"
         >
-          {/* Placeholder for Noto Landscape Image */}
-          <div className="absolute inset-0 bg-neutral-800 animate-pulse opacity-20"></div>
-           <div className="absolute inset-0 flex items-center justify-center text-neutral-600 font-bodoni italic opacity-50">
-             [ Image: Noto Peninsula / Sea ]
-           </div>
+          <ImagePlaceholder 
+            src="/images/origin/noto-landscape.jpg" 
+            alt="Noto Peninsula Landscape" 
+            className="w-full h-full"
+          />
            
            {/* Overlay Gradient */}
-           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
         </motion.div>
 
         {/* Text Side */}

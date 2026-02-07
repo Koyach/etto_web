@@ -1,14 +1,20 @@
 "use client";
 
 import { motion } from "framer-motion";
+import ImagePlaceholder from "./ImagePlaceholder";
 
 export default function Hero() {
-  const lines = ["精神は", "残り、", "形は", "進化する"];
+  const lines = ["精神は","残り、","形は","進化する"];
   
   return (
     <section className="relative w-full h-screen bg-[#050505] flex items-center justify-center overflow-hidden">
       {/* Visual Background: Deep Abyss */}
       <div className="absolute inset-0 z-0">
+          <ImagePlaceholder 
+            src="/images/hero/background.jpg"
+            alt="Hero Background"
+            className="w-full h-full opacity-50"
+          />
           {/* Subtle Lacquer Sheen - Moving slowly */}
          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-neutral-900/20 to-black z-10" />
          <motion.div 
@@ -30,7 +36,7 @@ export default function Hero() {
                className="absolute top-0 right-[-2rem] w-[1px] bg-gradient-to-b from-white/0 via-white/40 to-white/0"
             />
             
-            <h1 className="text-vertical text-[#F2F0EB] font-serif text-4xl md:text-6xl lg:text-7xl leading-loose font-medium select-none mix-blend-screen drop-shadow-2xl flex flex-col items-start gap-12 md:gap-16 lg:gap-24 h-auto min-h-[50vh]">
+            <h1 className="text-vertical text-[#F2F0EB] font-serif text-4xl md:text-6xl lg:text-7xl leading-loose font-medium select-none mix-blend-screen drop-shadow-2xl flex flex-col items-start gap-4 md:gap-6 lg:gap-8 h-auto min-h-[50vh]">
                 {lines.map((line, lineIndex) => (
                   <span key={lineIndex} className="block whitespace-nowrap">
                     {line.split("").map((char, charIndex) => (

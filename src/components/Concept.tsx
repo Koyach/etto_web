@@ -1,5 +1,7 @@
 "use client";
 
+import ImagePlaceholder from "./ImagePlaceholder";
+
 export default function Concept() {
   const philosophies = [
     {
@@ -8,7 +10,7 @@ export default function Concept() {
       titleJa: "素材の生命力",
       description: "大地が育んだ「木」の血液。地球の記憶を宿す石。\n自然への畏敬から生まれた素材は、化学には生み出せない「生命の塊」であり、\n圧倒的な堅牢さと、吸い込まれるような深淵を宿している。",
       bgGradient: "from-neutral-900 to-black",
-      image: "/images/material.jpg"
+      image: "/images/concept/material.jpg"
     },
     {
       id: "02",
@@ -16,7 +18,7 @@ export default function Concept() {
       titleJa: "職人の沈黙",
       description: "100を超える工程。数ヶ月、時に数年という歳月。\n言葉を持たないその手仕事の中に込められたのは、「一期一会」の精神と、妥協なき美学。\n静寂の中で極限まで高められた技術は、もはや魔術と区別がつかない。",
       bgGradient: "from-stone-900 to-black",
-      image: "/images/artisan.jpg"
+      image: "/images/concept/artisan.jpg"
     },
     {
       id: "03",
@@ -24,7 +26,7 @@ export default function Concept() {
       titleJa: "身体的記憶",
       description: "視覚を超えて、皮膚が記憶する美しさ。\n日本人が大切にしてきた「口当たり」「手触り」「温度」。\nETTOのクリエイションは、触れた瞬間に境界線を消し、あなたの身体の一部となる。",
       bgGradient: "from-slate-900 to-black",
-      image: "/images/tactile.jpg"
+      image: "/images/concept/tactile.jpg"
     }
   ];
 
@@ -59,9 +61,11 @@ export default function Concept() {
                    <div className="absolute -bottom-10 -right-10 text-[12rem] md:text-[20rem] font-bodoni text-white/5 font-bold leading-none z-0 transition-transform duration-1000 group-hover:scale-110">
                        {item.id}
                    </div>
-                   <div className="text-neutral-500 font-bodoni italic opacity-50 relative z-10">
-                       [ {item.titleEn} Visual ]
-                   </div>
+                   <ImagePlaceholder 
+                     src={item.image}
+                     alt={`${item.titleEn} Visual`}
+                     className="z-10 w-full h-full"
+                   />
                 </div>
 
                 {/* Text Side - Overlapping Card */}

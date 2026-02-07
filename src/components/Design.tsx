@@ -1,3 +1,5 @@
+import ImagePlaceholder from "./ImagePlaceholder";
+
 export default function Design() {
   return (
     <section className="w-full py-24 bg-gradient-to-b from-white to-soft-gray text-center">
@@ -6,8 +8,11 @@ export default function Design() {
         <p className="text-xs text-gray-500 mb-12">サプライズプロポーズのためのリングデザイン</p>
         
         <div className="relative">
-          <div className="w-full h-80 bg-gray-200 flex items-center justify-center rounded-sm mx-auto mb-8">
-            [Image: Ring Design Large]
+          <div className="w-full h-80 relative bg-gray-200 rounded-sm mx-auto mb-8 overflow-hidden">
+             <ImagePlaceholder 
+               src="/images/design/ring-large.jpg" 
+               alt="Ring Design Large"
+             />
           </div>
           <div className="text-left max-w-lg mx-auto">
              <p className="text-sm leading-8 text-gray-600 font-serif">

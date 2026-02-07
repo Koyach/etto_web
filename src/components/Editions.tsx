@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import ImagePlaceholder from "./ImagePlaceholder";
 
 export default function Editions() {
   return (
@@ -44,18 +45,14 @@ export default function Editions() {
                  transition={{ duration: 1.2, ease: "easeOut" }}
                  className="w-full aspect-[16/9] md:aspect-[21/9] bg-neutral-900 relative overflow-hidden group cursor-pointer"
               >
+                  <ImagePlaceholder 
+                     src="/images/editions/edition-hero.jpg"
+                     alt="WAJIMA Edition Hero Shot"
+                     className="z-0"
+                  />
                   {/* Hero Shot Placeholder - Representing "Texture" */}
-                  <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay"></div>
-                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/90"></div>
-                  
-                  <div className="absolute inset-0 flex items-center justify-center">
-                     <div className="text-center group-hover:scale-105 transition-transform duration-1000">
-                        <div className="w-[40vw] h-[40vw] bg-neutral-800 rounded-full blur-3xl opacity-20 mx-auto mb-[-20vw]"></div>
-                        <span className="font-bodoni italic text-3xl md:text-5xl text-white/30 tracking-widest">
-                            [ Macro Shot of Lacquer Curve ]
-                        </span>
-                     </div>
-                  </div>
+                  <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay z-10"></div>
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/90 z-20"></div>
 
                   {/* Button Overlay - "Glowing Line" Interaction */}
                   <div className="absolute bottom-12 right-12 z-20">

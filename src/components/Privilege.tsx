@@ -1,3 +1,5 @@
+import ImagePlaceholder from "./ImagePlaceholder";
+
 export default function Privilege() {
   return (
     <section className="w-full py-24 bg-beige-gold text-center">
@@ -16,8 +18,12 @@ export default function Privilege() {
              <span className="bg-gray-100 text-gray-500 px-4 py-1 text-xs">刻印サービス</span>
           </div>
 
-          <div className="w-full h-64 bg-gray-50 mb-8 flex items-center justify-center">
-             [Image: Diamond Rings]
+          <div className="w-full h-64 bg-gray-50 mb-8 relative">
+             <ImagePlaceholder 
+                src="/images/privilege/diamond-rings.jpg"
+                alt="Diamond Rings"
+                objectFit="contain"
+             />
           </div>
 
           <p className="text-sm font-bold text-brand-dark mb-4">

@@ -1,3 +1,5 @@
+import ImagePlaceholder from "./ImagePlaceholder";
+
 export default function RingCase() {
   return (
     <section className="w-full py-24 bg-soft-gray relative overflow-hidden">
@@ -19,8 +21,11 @@ export default function RingCase() {
           </button>
         </div>
         <div className="relative h-96">
-           <div className="absolute inset-0 bg-white shadow-xl transform rotate-3 flex items-center justify-center">
-             [Image: Open Ring Box with Ribbon]
+           <div className="absolute inset-0 bg-white shadow-xl transform rotate-3 overflow-hidden">
+             <ImagePlaceholder 
+               src="/images/case/ring-box-open.jpg" 
+               alt="Open Ring Box with Ribbon" 
+             />
            </div>
            {/* Decorative ribbon element could be added with CSS or SVG here */}
         </div>

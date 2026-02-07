@@ -1,3 +1,5 @@
+import ImagePlaceholder from "./ImagePlaceholder";
+
 export default function Variations() {
   return (
     <section className="w-full py-32 bg-[#050505] text-white border-t border-neutral-900">
@@ -17,10 +19,13 @@ export default function Variations() {
         </div>
 
         {/* Teaser Images Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16 opacity-60">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
            {[1, 2, 3, 4].map((i) => (
-             <div key={i} className="aspect-square bg-neutral-900 border border-neutral-800 flex items-center justify-center text-xs text-neutral-700">
-                [Collection {i}]
+             <div key={i} className="relative aspect-square bg-neutral-900 border border-neutral-800">
+                <ImagePlaceholder 
+                  src={`/images/collections/collection-${i}.jpg`}
+                  alt={`Collection ${i}`}
+                />
              </div>
            ))}
         </div>
