@@ -48,11 +48,11 @@ export default function Editions() {
                   <ImagePlaceholder 
                      src="/images/editions/edition-hero.jpg"
                      alt="WAJIMA Edition Hero Shot"
-                     className="z-0"
+                     className="z-0 w-full h-full"
                   />
                   {/* Hero Shot Placeholder - Representing "Texture" */}
                   <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay z-10"></div>
-                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/90 z-20"></div>
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/60 z-20"></div>
 
                   {/* Button Overlay - "Glowing Line" Interaction */}
                   <div className="absolute bottom-12 right-12 z-20">
